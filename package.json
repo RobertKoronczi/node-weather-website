@@ -11,5 +11,8 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js -e js,hbs"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
