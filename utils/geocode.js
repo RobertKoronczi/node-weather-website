@@ -8,9 +8,9 @@ const geocode = (address, callback) => {
         // callback(error, data)
 
         if (error) {
-            callback('Unable to connect to weather services!', undefined);
+            callback('Verbindung zu den Wetter Services konnte nicht hergestellt werden!', undefined);
         } else if (body.features.length === 0) {
-            callback('Unable to find location! Try an other search!', undefined);
+            callback('Standort konnte nicht gefunden werden! Versuchen Sie es mit einer anderen Suche!', undefined);
         } else {
             const data = body.features[0];
             const x = data.center[0];

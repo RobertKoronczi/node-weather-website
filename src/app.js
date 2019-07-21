@@ -36,10 +36,17 @@ app.get('/about', (req, res) => {
     });
 });
 
-app.get('/help', (req, res) => {
-    res.render('help', {
-        title: 'Hilfe',
-        message: 'Its a help message.',
+app.get('/kontakt', (req, res) => {
+    res.render('kontakt', {
+        title: 'Kontakt',
+        // labels
+        lMail: 'e-mail: ',
+        lTel: 'Tel: ',
+        lWeb: 'Web: ',
+        //
+        mail: 'korrob1990@gmail.com',
+        tel: '0177/5126785',
+        web: 'rk-portfolio.herokuapp.com',
         name
     });
 });
@@ -63,14 +70,6 @@ app.get('/weather', (req, res) =>{
                 location
             });
         });
-    });
-});
-
-app.get('/products', (req, res) => {
-    if (!req.query.search) return res.send( { error: 'You must provide a search term.'} );
-    
-    res.send( {
-        products: []
     });
 });
 

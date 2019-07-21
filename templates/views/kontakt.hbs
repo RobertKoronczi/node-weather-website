@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="/img/sun.png">
     <link rel="stylesheet" type="text/css" href="/css/styles.css"> 
-    <title>Hilfe</title>
+    <title>Kontakt</title>
 </head>
 <body>
     <div class="main-content">
         {{>header}}
-        <p>{{message}}</p>
+
+        <p>{{lTel}}{{tel}}</p>
+        <p>{{lMail}}<a href="mailto:korrob1990@gmail.com">{{mail}}</a></p>
+        <p>{{lWeb}}<a href="https://rk-portfolio.herokuapp.com">{{web}}</a></p>
+
     </div>
     {{>footer}}
 </body>
