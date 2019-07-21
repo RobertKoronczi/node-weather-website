@@ -1,5 +1,5 @@
 const search = (location, callback) => {
-    fetch(`http://localhost:9000/weather?adress=${location}`).then( response => {
+    fetch(`/weather?adress=${location}`).then( response => {
         response.json().then( data => {
             if (data.error) return callback(data.error, undefined);
             callback(undefined, data);
