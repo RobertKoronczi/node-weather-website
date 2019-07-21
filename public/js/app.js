@@ -1,5 +1,3 @@
-console.log('Client side js is loaded.');
-
 const search = (location, callback) => {
     fetch(`http://localhost:9000/weather?adress=${location}`).then( response => {
         response.json().then( data => {
