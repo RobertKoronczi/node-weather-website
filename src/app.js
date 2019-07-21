@@ -23,22 +23,22 @@ app.use(express.static(publicPath));
 const name = 'Robert Koronczi'
 
 app.get('', (req, res) => {
-    res.render('index', {
-        title: 'Weather app',
+    res.render('weather', {
+        title: 'Wetter app',
         name
     });
 });
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About me',
+        title: 'Beschreibung',
         name
     });
 });
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'help page',
+        title: 'Hilfe',
         message: 'Its a help message.',
         name
     });

@@ -9,22 +9,25 @@ const search = (location, callback) => {
 
 const weatherForm = document.querySelector('form');
 const searchInput = document.querySelector('input');
-const messageOne = document.querySelector('#message-1');
-const messageTwo = document.querySelector('#message-2');
+const message1 = document.querySelector('#message-1');
+const message2 = document.querySelector('#message-2');
+const message3 = document.querySelector('#message-3');
 
 weatherForm.addEventListener('submit', e => {
     e.preventDefault();
 
     const location = searchInput.value;
 
-    messageOne.textContent = 'loading...';
-    messageTwo.textContent = '';
+    message1.textContent = 'loading...';
+    message2.textContent = '';
+    message3.textContent = '';
 
     search(location, (error, data) => {
         if (error) {
               return messageOne.textContent = error;
         }
-        messageOne.textContent = `Location: ${data.location.toString()}`;
-        messageTwo.textContent = `${data.forecast.toString()}`;
+        message1.textContent = `Location: ${data.location.toString()}`;
+        message2.textContent = `${data.forecast.m1.toString()}`;
+        message3.textContent = `${data.forecast.m2.toString()}`;
     });
 })
